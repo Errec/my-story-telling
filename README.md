@@ -1,6 +1,15 @@
-# Nuxt 3 Minimal Starter
+## Build and Run with docker
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+To build and run your Docker container, use the following commands:
+
+```bash
+docker-compose build
+docker-compose up
+```
+
+
+This setup will build your Nuxt 3 application inside a Docker container and expose it on port 3000. You can access it at http://localhost:3000.
+
 
 ## Setup
 
