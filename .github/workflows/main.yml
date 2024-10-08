@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: nuxt-story-telling-pipeline
 
 on:
   push:
@@ -31,13 +31,13 @@ jobs:
         run: npm run build
 
       - name: Build Docker image
-        run: docker build -t my-nuxt-app .
+        run: docker build -t nuxt-story-telling .
 
       - name: Run Docker container
-        run: docker run -d -p 3000:3000 my-nuxt-app
+        run: docker run -d -p 3000:3000 nuxt-story-telling
 
       - name: Wait for container to be ready
-        run: sleep 15
+        run: sleep 10
 
       - name: Check if app is running
-        run: curl --fail http://localhost:3000 || exit 1
+        run: curl --fail http://localhost:3000 || (docker logs nuxt-story-telling && exit 1)
