@@ -9,8 +9,9 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .",
+    "format": "prettier --write .",
     "test": "vitest",
     "test:e2e": "cypress run",
     "test:e2e:dev": "cypress open"
@@ -31,8 +32,12 @@
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@vue/test-utils": "^2.4.5",
     "cypress": "^13.7.0",
-    "eslint": "^8.57.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-nuxt": "^4.0.0",
+    "eslint-plugin-prettier": "^5.2.1",
     "nuxt-stripe-module": "^3.2.0",
+    "prettier": "^3.3.3",
     "typescript": "^5.4.2",
     "vitest": "^1.4.0"
   }
